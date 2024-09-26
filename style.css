@@ -1,0 +1,151 @@
+/* common */
+body {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration-line: none; 
+}
+
+/*header*/
+.header {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  height: 70px;
+  border-bottom:1px solid #cccccc;
+}
+
+
+.logo {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.logo a {
+    color: orange;
+}
+
+
+nav {
+  margin-left: auto;
+}
+nav ul {
+  display: flex;
+  text-align: center;
+}
+
+nav ul li{
+  padding: 10px 22px;
+  font-size: 11px;
+  color: black;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: lighter;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.counseling {
+    background: orange;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* hero2 */
+.hero {
+    display: flex;
+    width: 100%;
+    height: 670px;
+    /* background: green; */
+    position: relative;
+}
+
+.triangle_left_top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.triangle_right_bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.triangle_left_center {
+    position: absolute;
+    left: -50px;
+    bottom: 70px;
+    z-index: 1;
+}
+
+.man_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+/* boshu */
+.boshu {
+    height: 430px;
+    width: 630px;
+    /* background: green; */
+    position: absolute;
+    right: calc(50% - 100px);
+    top: calc(50% - 200px);
+    z-index: 3;
+}
+
+.boshu2 {
+    height: 430px;
+    width: 630px;
+    /* background: blue; */
+    position: relative;
+}
+
+.boshu_text {
+    /* background: green; */
+    height: 320px;
+    width: 475px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.boshu2 img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.boshu2 h2 {
+    font-size: 40px;
+}
+
+.boshu2 a {
+    display: block;
+    background: orange;
+    color: white;
+    padding: 20px 130px;
+    border-radius: 40px;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.boshu2 p {
+    font-size: 11px;
+    font-weight: lighter;
+}
