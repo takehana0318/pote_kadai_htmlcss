@@ -76,6 +76,17 @@ ul {
     left: 0;
     top: 0;
     z-index: 1;
+    width: 250px;
+    height: 250px;
+}
+
+.triangle_left_center {
+    position: absolute;
+    left: -50px;
+    bottom: 70px;
+    z-index: 1;
+    width: 450px;
+    height: 520px; 
 }
 
 .triangle_right_bottom {
@@ -84,12 +95,7 @@ ul {
     bottom: 0;
 }
 
-.triangle_left_center {
-    position: absolute;
-    left: -50px;
-    bottom: 70px;
-    z-index: 1;
-}
+
 
 .man_right {
     position: absolute;
@@ -148,4 +154,90 @@ ul {
 .boshu2 p {
     font-size: 11px;
     font-weight: lighter;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 761px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+    .boshu {
+        height: 430px;
+        width: 630px;
+        /* background: green; */
+        position: absolute;
+        left: 20px;
+        top: calc(50% - 220px);
+        z-index: 3;
+    }
+
+    .hero {
+       height: 650px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .hero {
+       height: 114vw;
+    }
+    
+    .triangle_left_top {
+        width: calc(25%);
+        height: calc(22%);
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }
+    .triangle_right_bottom {
+        display: none;
+    }
+    .triangle_left_center {
+        position: absolute;
+        left: calc(15%);
+        top: calc(3%);
+        z-index: 1;
+        width: 50vw;
+        height: 50vw; 
+    }
+
+    .man_right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        width: 71vw;
+        height: 65vw;
+
+    }
+
+    .boshu {
+        left: 20px;
+        top: calc(50% - 100px);
+        width: 480px;
+    }
+    .boshu2 {
+        width: 480px;
+    }
+    .boshu2 img {
+        position: absolute;
+        left: 200px;
+        top: 75px;
+        width: 100px;
+    }
+
+    .boshu2 h2 {
+        font-size: 20px;
+    }
+
+    .boshu2 a {
+        display: block;
+        background: orange;
+        color: white;
+        padding: 20px 130px;
+        border-radius: 40px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .boshu2 p {
+        font-size: 11px;
+        font-weight: lighter;
+    }
 }
