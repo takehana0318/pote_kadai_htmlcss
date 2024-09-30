@@ -11,6 +11,10 @@ a {
     text-decoration-line: none; 
 }
 
+p {
+    margin: 0;
+}
+
 /*header*/
 .header {
   display: flex;
@@ -49,6 +53,11 @@ nav ul li a {
     color: black;
     font-weight: lighter;
 }
+
+.menu li a:hover {
+    background-color: #555;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -56,10 +65,33 @@ ul {
 }
 
 .counseling {
+    display: inline-block;
     background: orange;
     color: white;
     padding: 8px;
     border-radius: 8px;
+    /* margin-top: 16px; */
+}
+
+.menu-icon {
+    display: none; /* ハンバーガーアイコンをブロック要素に設定 */
+    cursor: pointer; /* マウスカーソルがアイコン上でポインタに変わるように設定 */
+    width: 30px; /* ハンバーガーアイコンの幅を30pxに設定 */
+    height: 25px; /* ハンバーガーアイコンの高さを25pxに設定 */
+    position: relative; /* アイコンを相対配置 */
+}
+
+.menu-icon span {
+    display: block; /* 各ラインをブロック要素に設定 */
+    width: 100%; /* 各ラインの幅を親要素（アイコン）に合わせる */
+    height: 3px; /* 各ラインの高さを3pxに設定 */
+    background-color: black; /* ラインの色を白に設定 */
+    margin-bottom: 5px; /* 各ラインの間に5pxの間隔を追加 */
+    transition: all 0.3s; /* 0.3秒でアニメーションの変化を行う */
+}
+
+#menu-toggle {
+    display: none; /* チェックボックスを画面に表示しないように設定 */
 }
 
 /* hero2 */
@@ -171,6 +203,87 @@ ul {
     .hero {
        height: 650px;
     }
+    .menu-icon {
+        display: block; /* ハンバーガーアイコンをブロック要素に設定 */
+        cursor: pointer; /* マウスカーソルがアイコン上でポインタに変わるように設定 */
+        width: 30px; /* ハンバーガーアイコンの幅を30pxに設定 */
+        height: 25px; /* ハンバーガーアイコンの高さを25pxに設定 */
+        position: relative; /* アイコンを相対配置 */
+        margin-right: 20px;
+    }
+
+    .menu-icon span {
+        display: block; /* 各ラインをブロック要素に設定 */
+        width: 100%; /* 各ラインの幅を親要素（アイコン）に合わせる */
+        height: 3px; /* 各ラインの高さを3pxに設定 */
+        background-color: black; /* ラインの色を白に設定 */
+        margin-bottom: 5px; /* 各ラインの間に5pxの間隔を追加 */
+        transition: all 0.3s; /* 0.3秒でアニメーションの変化を行う */
+    }
+
+    #menu-toggle {
+        display: none; /* チェックボックスを画面に表示しないように設定 */
+    }
+
+    .menu {
+        display: none; /* メニューリストを非表示に設定 */
+        list-style: none; /* リスト項目のデフォルトのリストスタイルをなしにする */
+        background-color: rgba(0, 0, 0, 0.8); /* 背景色の青色を50%透明に設定 */
+        position: absolute; /* メニューを絶対配置で画面に配置 */
+        top: 70px; /* メニューの上部を40px下に配置 */
+        right: 0; /* メニューを右端に配置 */
+        width: 100%; /* メニューの幅を200pxに設定 */
+        height: 100%;
+        z-index: 10;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: block; /* チェックが入るとメニューを表示 */
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(45deg); /* 45度回転 */
+        position: relative; /* ラインを相対的に配置 */
+        top: 8px; /* 8px下に移動 */
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0; /* 完全に透明にする */
+    }
+
+    /* チェックボックスがオンのときに3本目のラインを回転させる */
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg); /* 逆方向に45度回転 */
+        position: relative; /* ラインを相対的に配置 */
+        top: -8px; /* 8px上に移動 */
+    }
+
+    nav ul li a {
+        color: white;
+        font-size: 16px;
+        display: inline-block;
+    }
+    
+    p {
+        padding-top: 12px;
+        margin: 0;
+    }
+
+    .eng {
+        letter-spacing: 4px;
+    }
+
+    .jp {
+        letter-spacing: 2px;
+        font-size: 12px;
+        color: orange;
+    }
+    .counseling {
+        display: inline-block;
+        padding: 16px 32px;
+        border-radius: 32px;
+        margin-top: 16px;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -239,5 +352,87 @@ ul {
     .boshu2 p {
         font-size: 11px;
         font-weight: lighter;
+    }
+
+    .menu-icon {
+        display: block; /* ハンバーガーアイコンをブロック要素に設定 */
+        cursor: pointer; /* マウスカーソルがアイコン上でポインタに変わるように設定 */
+        width: 30px; /* ハンバーガーアイコンの幅を30pxに設定 */
+        height: 25px; /* ハンバーガーアイコンの高さを25pxに設定 */
+        position: relative; /* アイコンを相対配置 */
+        margin-right: 20px;
+    }
+
+    .menu-icon span {
+        display: block; /* 各ラインをブロック要素に設定 */
+        width: 100%; /* 各ラインの幅を親要素（アイコン）に合わせる */
+        height: 3px; /* 各ラインの高さを3pxに設定 */
+        background-color: black; /* ラインの色を白に設定 */
+        margin-bottom: 5px; /* 各ラインの間に5pxの間隔を追加 */
+        transition: all 0.3s; /* 0.3秒でアニメーションの変化を行う */
+    }
+
+    #menu-toggle {
+        display: none; /* チェックボックスを画面に表示しないように設定 */
+    }
+
+    .menu {
+        display: none; /* メニューリストを非表示に設定 */
+        list-style: none; /* リスト項目のデフォルトのリストスタイルをなしにする */
+        background-color: rgba(0, 0, 0, 0.8); /* 背景色の青色を50%透明に設定 */
+        position: absolute; /* メニューを絶対配置で画面に配置 */
+        top: 70px; /* メニューの上部を40px下に配置 */
+        right: 0; /* メニューを右端に配置 */
+        width: 100%; /* メニューの幅を200pxに設定 */
+        height: 100%;
+        z-index: 10;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: block; /* チェックが入るとメニューを表示 */
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(45deg); /* 45度回転 */
+        position: relative; /* ラインを相対的に配置 */
+        top: 8px; /* 8px下に移動 */
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0; /* 完全に透明にする */
+    }
+
+    /* チェックボックスがオンのときに3本目のラインを回転させる */
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg); /* 逆方向に45度回転 */
+        position: relative; /* ラインを相対的に配置 */
+        top: -8px; /* 8px上に移動 */
+    }
+
+    nav ul li a {
+        color: white;
+        font-size: 16px;
+        display: inline-block;
+    }
+    
+    p {
+        padding-top: 12px;
+        margin: 0;
+    }
+
+    .eng {
+        letter-spacing: 4px;
+    }
+
+    .jp {
+        letter-spacing: 2px;
+        font-size: 12px;
+        color: orange;
+    }
+    .counseling {
+        display: inline-block;
+        padding: 16px 32px;
+        border-radius: 32px;
+        margin-top: 16px;
     }
 }
