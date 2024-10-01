@@ -70,9 +70,7 @@ a:hover {
     opacity: 0.8; /* ホバー時に少し透明にする */
 }
 
-.menu li a:hover {
-    background-color: #555;
-}
+
 
 ul {
   padding: 0;
@@ -285,13 +283,14 @@ ul {
     .hero {
        height: 739px;
     }
+    
     .menu-icon {
         display: block; /* ハンバーガーアイコンをブロック要素に設定 */
         cursor: pointer; /* マウスカーソルがアイコン上でポインタに変わるように設定 */
         width: 24px; /* ハンバーガーアイコンの幅を30pxに設定 */
         height: 17px; /* ハンバーガーアイコンの高さを25pxに設定 */
         position: relative; /* アイコンを相対配置 */
-        margin-right: 36px;
+        margin-right: 16px;
     }
 
     .menu-icon span {
@@ -316,7 +315,7 @@ ul {
         right: 0; /* メニューを右端に配置 */
         width: 100%; /* メニューの幅を200pxに設定 */
         height: 100%;
-        z-index: 10;
+        z-index: 100;
     }
 
     #menu-toggle:checked + .menu-icon + .menu {
@@ -339,11 +338,15 @@ ul {
         position: relative; /* ラインを相対的に配置 */
         top: -8px; /* 8px上に移動 */
     }
+    nav ul  {
+        padding-top: 20px;
+    }
 
     nav ul li a {
         color: white;
         font-size: 16px;
         display: inline-block;
+        padding: 20px 0;
     }
     
     p {
@@ -352,6 +355,8 @@ ul {
 
     .eng {
         letter-spacing: 4px;
+        font-size: 16px;
+        color: white;
     }
 
     .jp {
@@ -360,10 +365,19 @@ ul {
         color: orange;
     }
     .counseling {
-        display: inline-block;
-        padding: 16px 32px;
         border-radius: 32px;
-        margin-top: 16px;
+        margin: 20px auto 0;
+        padding: 0 20px;
+        height: 40px;
+        border-radius: 38px;
+        height: 60px;
+        width: 210px;
+        font-size: 16px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background: #F79214; 
+        color: white;
     }
 }
 
@@ -535,11 +549,6 @@ ul {
     }
 
 
-    a:hover {
-        color: inherit !important; /* ホバー時も色を変えないように強制 */
-        text-decoration: none !important; /* ホバー時の下線を強制的に消す */
-        background-color: inherit !important; /* ホバー時の背景色を透明に強制 */
-    }
 }
 
 @media screen and (max-width: 523px) {
@@ -673,6 +682,9 @@ ul {
         position: relative; /* ラインを相対的に配置 */
         top: -8px; /* 8px上に移動 */
     }
+    nav ul  {
+        padding-top: 20px;
+    }
 
     nav ul li a {
         color: white;
@@ -682,12 +694,13 @@ ul {
     }
     
     p {
-        padding-top: 12px;
         margin: 0;
     }
 
     .eng {
         letter-spacing: 4px;
+        font-size: 16px;
+        color: white;
     }
 
     .jp {
@@ -696,11 +709,21 @@ ul {
         color: orange;
     }
     .counseling {
-        display: inline-block;
-        padding: 16px 32px;
         border-radius: 32px;
-        margin-top: 16px;
+        margin: 20px auto 0;
+        padding: 0 20px;
+        height: 40px;
+        border-radius: 38px;
+        height: 60px;
+        width: 210px;
+        font-size: 16px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background: #F79214; 
+        color: white;
     }
+
 }
 
 .box {
