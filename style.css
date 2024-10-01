@@ -21,13 +21,26 @@ p {
   margin: 0 auto;
   align-items: center;
   height: 70px;
-  border-bottom:1px solid #cccccc;
+  background-color: white;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif; /* ウェイトが豊富なフォントを指定 */
 }
 
 
 .logo {
     font-size: 20px;
-    padding-left: 20px;
+    padding-left: 36px;
+}
+
+.pc_logo {
+    width: 185px;
+    height: 20px;
+}
+
+.sp_logo {
+    display: none;
 }
 
 .logo a {
@@ -44,14 +57,17 @@ nav ul {
 }
 
 nav ul li{
-  padding: 10px 22px;
+  padding-left: 45px;
   font-size: 11px;
   color: black;
 }
 
 nav ul li a {
     color: black;
-    font-weight: lighter;
+}
+
+a:hover {
+    opacity: 0.8; /* ホバー時に少し透明にする */
 }
 
 .menu li a:hover {
@@ -64,13 +80,26 @@ ul {
   list-style: none;
 }
 
+.eng {
+    font-size: 12px;
+}
+
+.jp {
+    font-size: 10px;
+}
+
 .counseling {
     display: inline-block;
-    background: orange;
+    background: #F79214; 
     color: white;
-    padding: 8px;
-    border-radius: 8px;
-    /* margin-top: 16px; */
+    padding: 0 20px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 38px;
+    margin-right: 36px;
+    font-size: 12px;
 }
 
 .menu-icon {
@@ -98,49 +127,52 @@ ul {
 .hero {
     display: flex;
     width: 100%;
-    height: 670px;
+    height: 739px;
     /* background: green; */
     position: relative;
 }
 
 .triangle_left_top {
     position: absolute;
-    left: 0;
+    left: -70px;
     top: 0;
     z-index: 1;
-    width: 250px;
-    height: 250px;
+    width: 348px;
+    height: 348px;
 }
 
 .triangle_left_center {
     position: absolute;
-    left: -50px;
-    bottom: 70px;
+    top: 84px;
+    left: -70px;
     z-index: 1;
-    width: 450px;
-    height: 520px; 
+    width: 527px;
+    height: 527px; 
 }
 
 .triangle_right_bottom {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 70px;
+    width: 348px;
+    height: 348px;
 }
-
 
 
 .man_right {
     position: absolute;
+    width: 775px;
+    height: 639px;
+    top: -70px;
     right: 0;
-    top: 0;
-    z-index: 2;
+    z-index: -10;
 }
 
 /* boshu */
+/*
 .boshu {
     height: 430px;
     width: 630px;
-    /* background: green; */
     position: absolute;
     right: calc(50% - 100px);
     top: calc(50% - 200px);
@@ -150,73 +182,123 @@ ul {
 .boshu2 {
     height: 430px;
     width: 630px;
-    /* background: blue; */
     position: relative;
 }
 
 .boshu_text {
-    /* background: green; */
     height: 320px;
     width: 475px;
     position: absolute;
     left: 0;
     bottom: 0;
 }
+*/
+
+.boshu {
+    width: 1040px;
+    height: 37px;
+    margin: 0 auto;
+    padding-top: 219px;
+    z-index: 10;
+}
+
+.boshu2 {
+    width: 481.125px;
+    position: relative;
+}
 
 .boshu2 img {
     position: absolute;
-    right: 0;
-    top: 0;
+    top: -105px;
+    right: -150px;
 }
 
 .boshu2 h2 {
-    font-size: 40px;
+    font-size: 42px;
+    margin-bottom: 16px;
 }
 
 .boshu2 a {
-    display: block;
-    background: orange;
+    background: #F79214; 
     color: white;
-    padding: 20px 130px;
-    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 38px;
     font-size: 16px;
-    margin-top: 30px;
+    height: 64px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 16px;
 }
 
 .boshu2 p {
-    font-size: 11px;
-    font-weight: lighter;
+    font-size: 12px;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 761px) {
+.boshu_phone {
+    display: none;
+}
+
+@media screen and (max-width: 1080px) and (min-width: 761px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
-    .boshu {
-        height: 430px;
-        width: 630px;
-        /* background: green; */
+    .triangle_left_top {
         position: absolute;
-        left: 20px;
-        top: calc(50% - 220px);
-        z-index: 3;
+        top: -70px;
+        left: 0;
+        z-index: -1;
+        width: 348px;
+        height: 348px;
     }
 
+    .boshu {
+        width: 100%;
+        height: 317px;
+        padding-top: 219px;
+        padding-left: 36px;
+        padding-right: 36px;
+        z-index: 10;
+    }
+
+    .boshu2 {
+        width: 481.125px;
+        height: 317px;
+        position: relative;
+    }
+    .triangle_right_bottom {
+        position: absolute;
+        right: 0;
+        bottom: 70px;
+        width: 348px;
+        height: 348px;
+    }
+
+    .triangle_left_center {
+        position: absolute;
+        top: 84px;
+        left: -70px;
+        z-index: -11;
+        width: 527px;
+        height: 527px; 
+    }
+    
     .hero {
-       height: 650px;
+       height: 739px;
     }
     .menu-icon {
         display: block; /* ハンバーガーアイコンをブロック要素に設定 */
         cursor: pointer; /* マウスカーソルがアイコン上でポインタに変わるように設定 */
-        width: 30px; /* ハンバーガーアイコンの幅を30pxに設定 */
-        height: 25px; /* ハンバーガーアイコンの高さを25pxに設定 */
+        width: 24px; /* ハンバーガーアイコンの幅を30pxに設定 */
+        height: 17px; /* ハンバーガーアイコンの高さを25pxに設定 */
         position: relative; /* アイコンを相対配置 */
-        margin-right: 20px;
+        margin-right: 36px;
     }
 
     .menu-icon span {
         display: block; /* 各ラインをブロック要素に設定 */
         width: 100%; /* 各ラインの幅を親要素（アイコン）に合わせる */
-        height: 3px; /* 各ラインの高さを3pxに設定 */
-        background-color: black; /* ラインの色を白に設定 */
+        height: 2px; /* 各ラインの高さを3pxに設定 */
+        background-color: #A2A2A4; /* ラインの色を白に設定 */
         margin-bottom: 5px; /* 各ラインの間に5pxの間隔を追加 */
         transition: all 0.3s; /* 0.3秒でアニメーションの変化を行う */
     }
@@ -265,7 +347,6 @@ ul {
     }
     
     p {
-        padding-top: 12px;
         margin: 0;
     }
 
@@ -286,88 +367,272 @@ ul {
     }
 }
 
-@media screen and (max-width: 760px) {
-    .hero {
-       height: 114vw;
+@media screen and (max-width: 760px) and (min-width: 524px) {
+    .pc_logo {
+        display: none;
     }
-    
+    .logo {
+        padding-left: 16px;
+    }
+    .sp_logo {
+        display: block;
+        width: 148px;
+        height: 16px;
+    }
+    .hero {
+        display: block;
+    }
     .triangle_left_top {
-        width: calc(25%);
-        height: calc(22%);
-        right: 0;
-        bottom: 0;
-        position: absolute;
+        display: none;
     }
     .triangle_right_bottom {
         display: none;
     }
     .triangle_left_center {
-        position: absolute;
-        left: calc(15%);
-        top: calc(3%);
-        z-index: 1;
-        width: 50vw;
-        height: 50vw; 
+        display: none;
+    }
+    .man_right {
+        display: none;
     }
 
-    .man_right {
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 2;
-        width: 71vw;
-        height: 65vw;
-
+    .boshu_phone {
+        display: block;
+        width: 100vw;
+        height: 62vw;
+        max-width: 100%; 
     }
 
     .boshu {
-        left: 20px;
-        top: calc(50% - 100px);
-        width: 480px;
-    }
-    .boshu2 {
-        width: 480px;
-    }
-    .boshu2 img {
-        position: absolute;
-        left: 200px;
-        top: 75px;
-        width: 100px;
+        width: 100%;
+        padding: 0 16px 16px;
+        box-sizing: border-box;
     }
 
-    .boshu2 h2 {
-        font-size: 20px;
+    .boshu2 {
+        width: 481px;
+    }
+
+    .boshu h2 {
+        display: inline-block;
+        position: relative;
+        font-size: 22px;
+        box-sizing: border-box;
     }
 
     .boshu2 a {
-        display: block;
-        background: orange;
-        color: white;
-        padding: 20px 130px;
-        border-radius: 40px;
-        font-size: 16px;
-        margin-top: 30px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .boshu2 img {
+        position: absolute;
+        height: 102px;
+        width: 102px;
+        top: -20px;
+        right: -85px;
     }
 
     .boshu2 p {
-        font-size: 11px;
-        font-weight: lighter;
+        font-size: 12px;
+        padding: 0;
     }
 
     .menu-icon {
         display: block; /* ハンバーガーアイコンをブロック要素に設定 */
         cursor: pointer; /* マウスカーソルがアイコン上でポインタに変わるように設定 */
-        width: 30px; /* ハンバーガーアイコンの幅を30pxに設定 */
-        height: 25px; /* ハンバーガーアイコンの高さを25pxに設定 */
+        width: 24px; /* ハンバーガーアイコンの幅を30pxに設定 */
+        height: 17px; /* ハンバーガーアイコンの高さを25pxに設定 */
         position: relative; /* アイコンを相対配置 */
-        margin-right: 20px;
+        margin-right: 16px;
     }
 
     .menu-icon span {
         display: block; /* 各ラインをブロック要素に設定 */
         width: 100%; /* 各ラインの幅を親要素（アイコン）に合わせる */
-        height: 3px; /* 各ラインの高さを3pxに設定 */
-        background-color: black; /* ラインの色を白に設定 */
+        height: 2px; /* 各ラインの高さを3pxに設定 */
+        background-color: #A2A2A4; /* ラインの色を白に設定 */
+        margin-bottom: 5px; /* 各ラインの間に5pxの間隔を追加 */
+        transition: all 0.3s; /* 0.3秒でアニメーションの変化を行う */
+    }
+
+    #menu-toggle {
+        display: none; /* チェックボックスを画面に表示しないように設定 */
+    }
+
+    .menu {
+        display: none; /* メニューリストを非表示に設定 */
+        list-style: none; /* リスト項目のデフォルトのリストスタイルをなしにする */
+        background-color: rgba(0, 0, 0, 0.8); /* 背景色の青色を50%透明に設定 */
+        position: absolute; /* メニューを絶対配置で画面に配置 */
+        top: 70px; /* メニューの上部を40px下に配置 */
+        right: 0; /* メニューを右端に配置 */
+        width: 100%; /* メニューの幅を200pxに設定 */
+        height: 100%;
+        z-index: 10;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: block; /* チェックが入るとメニューを表示 */
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(45deg); /* 45度回転 */
+        position: relative; /* ラインを相対的に配置 */
+        top: 8px; /* 8px下に移動 */
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0; /* 完全に透明にする */
+    }
+
+    /* チェックボックスがオンのときに3本目のラインを回転させる */
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg); /* 逆方向に45度回転 */
+        position: relative; /* ラインを相対的に配置 */
+        top: -8px; /* 8px上に移動 */
+    }
+
+    nav ul  {
+        padding-top: 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        font-size: 16px;
+        display: inline-block;
+        padding: 20px 0;
+    }
+    
+    p {
+        margin: 0;
+    }
+
+    .eng {
+        letter-spacing: 4px;
+        font-size: 16px;
+        color: white;
+    }
+
+    .jp {
+        letter-spacing: 2px;
+        font-size: 12px;
+        color: orange;
+    }
+    .counseling {
+        border-radius: 32px;
+        margin: 20px auto 0;
+        padding: 0 20px;
+        height: 40px;
+        border-radius: 38px;
+        height: 60px;
+        width: 210px;
+        font-size: 16px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background: #F79214; 
+        color: white;
+    }
+
+
+    a:hover {
+        color: inherit !important; /* ホバー時も色を変えないように強制 */
+        text-decoration: none !important; /* ホバー時の下線を強制的に消す */
+        background-color: inherit !important; /* ホバー時の背景色を透明に強制 */
+    }
+}
+
+@media screen and (max-width: 523px) {
+    .header {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        height: 48px;
+        background-color: white;
+    }
+    .pc_logo {
+        display: none;
+    }
+    .logo {
+        padding-left: 16px;
+    }
+    .sp_logo {
+        display: block;
+        width: 148px;
+        height: 16px;
+    }
+    .hero {
+        display: block;
+    }
+    .triangle_left_top {
+        display: none;
+    }
+    .triangle_right_bottom {
+        display: none;
+    }
+    .triangle_left_center {
+        display: none;
+    }
+    .man_right {
+        display: none;
+    }
+
+    .boshu_phone {
+        display: block;
+        width: 100vw;
+        height: 62vw;
+        max-width: 100%; 
+    }
+
+    .boshu {
+        width: 100%;
+        padding: 0 16px 16px;
+        box-sizing: border-box;
+    }
+
+    .boshu2 {
+        width: 100%;
+    }
+
+    .boshu h2 {
+        display: inline-block;
+        position: relative;
+        font-size: 22px;
+        box-sizing: border-box;
+    }
+
+    .boshu2 a {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .boshu2 img {
+        position: absolute;
+        height: 102px;
+        width: 102px;
+        top: -20px;
+        right: -85px;
+    }
+
+    .boshu2 p {
+        font-size: 12px;
+        padding: 0;
+    }
+
+    .menu-icon {
+        display: block; /* ハンバーガーアイコンをブロック要素に設定 */
+        cursor: pointer; /* マウスカーソルがアイコン上でポインタに変わるように設定 */
+        width: 24px; /* ハンバーガーアイコンの幅を30pxに設定 */
+        height: 17px; /* ハンバーガーアイコンの高さを25pxに設定 */
+        position: relative; /* アイコンを相対配置 */
+        margin-right: 16px;
+    }
+
+    .menu-icon span {
+        display: block; /* 各ラインをブロック要素に設定 */
+        width: 100%; /* 各ラインの幅を親要素（アイコン）に合わせる */
+        height: 2px; /* 各ラインの高さを3pxに設定 */
+        background-color: #A2A2A4; /* ラインの色を白に設定 */
         margin-bottom: 5px; /* 各ラインの間に5pxの間隔を追加 */
         transition: all 0.3s; /* 0.3秒でアニメーションの変化を行う */
     }
@@ -413,6 +678,7 @@ ul {
         color: white;
         font-size: 16px;
         display: inline-block;
+        padding: 20px 0;
     }
     
     p {
@@ -435,4 +701,9 @@ ul {
         border-radius: 32px;
         margin-top: 16px;
     }
+}
+
+.box {
+    height: 1000px;
+    width: 100px;
 }
